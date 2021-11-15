@@ -1,5 +1,8 @@
 <template>
   <div class="home w">
+    
+    
+
 
     <transition name="animate__animated animate__bounce" 
     enter-active-class="animate__fadeIn"
@@ -98,4 +101,5 @@ export default {
 .pageination {
   text-align: center;
 }
+
 </style>

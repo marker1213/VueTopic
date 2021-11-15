@@ -1,25 +1,15 @@
 <template>
   <div class="detail w">
-    <el-row :gutter="20">
-      <el-col :span="6"><user-message></user-message></el-col>
-
-      <el-col :span="18">
-        <div class="main">
-            <h2>我是标题</h2>
-            <el-divider></el-divider>
-            <div class="content">
-                我是内容
-            </div>
-        </div>
-      </el-col>
-    </el-row>
+    <h2>标题</h2>
+    <div>目录</div>
+    <div class="content">内容</div>
   </div>
 </template>
 
 <script>
-import UserMessage from "../home/childrens/UserMessage.vue";
+
 export default {
-  components: { UserMessage },
+  components: {  },
   data() {
     return {
       blog: {
@@ -34,10 +24,11 @@ export default {
 </script>
 
 <style scoped>
-.main {
+.detail {
   height: 666px;
   /* width: 666px; */
   background: #fff;
-  padding: 20px;
+  padding: 40px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
 }
 </style>

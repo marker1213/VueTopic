@@ -13,6 +13,9 @@
       </el-col>
       <el-col :span="5">
         <div class="user">
+          <el-badge :value="200" :max="99" class="item">
+            <el-button type="info" icon="el-icon-message" circle></el-button>
+          </el-badge>
           <el-dropdown>
             <el-avatar
               :size="50"
@@ -21,8 +24,12 @@
             ></el-avatar>
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item icon="el-icon-plus">个人主页</el-dropdown-item>
-              <el-dropdown-item icon="el-icon-circle-plus">收藏夹</el-dropdown-item>
-              <el-dropdown-item icon="el-icon-circle-plus-outline">退出登录</el-dropdown-item>
+              <el-dropdown-item icon="el-icon-circle-plus"
+                >收藏夹</el-dropdown-item
+              >
+              <el-dropdown-item icon="el-icon-circle-plus-outline"
+                >退出登录</el-dropdown-item
+              >
             </el-dropdown-menu>
           </el-dropdown>
         </div>
@@ -128,5 +135,9 @@ button {
   right: 10%;
   top: 8px;
   cursor: pointer;
+}
+.item {
+  margin-right: 45px;
+  margin-bottom: 40px;
 }
 </style>

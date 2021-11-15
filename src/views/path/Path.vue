@@ -1,6 +1,6 @@
 <template>
-  <el-container>
-    <el-aside width="200px">
+  <div class="studypath">
+    <div class="aside">
       <el-menu
         default-active="1"
         class="el-menu-vertical-demo"
@@ -60,25 +60,19 @@
           <span slot="title">导航四</span>
         </el-menu-item>
       </el-menu>
-      <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
-        <el-radio-button :label="false">展开</el-radio-button>
-        <el-radio-button :label="true">收起</el-radio-button>
-      </el-radio-group>
+    </div>
 
-      
-    </el-aside>
-
-    <el-main>
+    <div class="main">
       <div class="header"></div>
       <div class="search"></div>
       <div class="content">
-        <el-card class="box-card" v-for="item in 9" shadow="hover">
-        <h3>内容</h3>
-        <p>介绍</p>  
+        <el-card class="box-card" v-for="item in 9" shadow="hover" @click="toPathDetail">
+          <h3>内容</h3>
+          <p>介绍</p>
         </el-card>
       </div>
-    </el-main>
-  </el-container>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -90,8 +84,12 @@ export default {
         course: {},
         basic: {},
       },
-      isCollapse: false,
     };
+  },
+  methods: {
+    toPathDetail(){
+      
+    }
   },
 };
 </script>
@@ -99,14 +97,30 @@ export default {
 <style scoped>
 /* 展开收起动画丝滑 */
 .el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 200px;
-    min-height: 400px;
-  }
+  width: 200px;
+  min-height: 400px;
+  /* position: fixed; */
+}
+.studypath {
+  margin-top: 20px;
+}
+.aside {
+  float: left;
+  margin-right: 20px;
+  height: 100vh;
+  background: #fff;
+  
+}
+.main {
+  /* float: left; */
+  overflow: auto;
+}
 .header {
+  
   margin-top: -20px;
   margin-bottom: 20px;
   margin-left: -20px;
-  margin-right: -20px;
+  /* margin-right: -20px; */
   height: 100px;
   background: #fff;
 }
@@ -126,5 +140,4 @@ export default {
   margin-top: 20px;
   background: #fff;
 }
-
 </style>
